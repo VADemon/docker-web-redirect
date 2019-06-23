@@ -8,4 +8,7 @@ RUN apk add --update bash \
 
 EXPOSE 80
 
+RUN adduser --disabled-password webredirect
+USER webredirect
+
 CMD ["start.sh"]
